@@ -31,8 +31,8 @@ with app.app_context():
 
 @app.route("/")
 def home():
-    name = '최지웅'
-    motto = "행복해서 웃는게 아니라 웃어서 행복합니다."
+    name = '곽민지'
+    motto = "늦었다고 생각할 때가 진짜 너무 늦었다."
 
     context = {
         "name": name,
@@ -76,5 +76,3 @@ def render_music_filter(username):
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-    # /home/mini0006/mysite/
