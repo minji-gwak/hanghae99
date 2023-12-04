@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- og 태그 설정 -->
     <meta property="og:title" content="민지의 연습장" />
     <meta property="og:description" content="민지의 모토 / 음악 구경하기" />
     <meta property="og:image" content="https://i.ytimg.com/vi/h81UOjlFmMs/maxresdefault.jpg" />
@@ -175,7 +176,6 @@
       fetch(url)
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
           let author = data['author'];
           let content = data['content'];
 
@@ -189,7 +189,7 @@
       fetch(weather_url)
         .then((res) => res.json())
         .then((data) => {
-          // console.log(data);
+          console.log(data);
           let temp = data['temp'];
           let icon_url = data['icon'];
 
