@@ -38,7 +38,7 @@ def home():
         "name": name,
         "motto": motto,
     }
-    return render_template('motto.html', data=context)
+    return render_template('motto.html', data = context)
 
 @app.route("/music/")
 def music():
@@ -53,7 +53,7 @@ def iloveyou(name):
         'name': name,
         'motto': motto,
     }
-    return render_template('motto.html', data=context)
+    return render_template('motto.html', data = context)
 
 @app.route("/music/create/")
 def music_create():
@@ -76,3 +76,5 @@ def render_music_filter(username):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+    # /home/mini0006/mysite/
