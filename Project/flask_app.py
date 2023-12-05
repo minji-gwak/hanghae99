@@ -68,6 +68,16 @@ def music_create():
 
     return redirect(url_for('render_music_filter', username = username_receive))
 
+@app.route("/music/delete/")
+def music_delete():
+    id_receive = request.args.get('id')
+    delete_song = Song.query.filter_by(id=id_receive).first()
+    db.session.delete(delete_song)
+    db.session.commit()
+
+    return redirect(url_for('music'))
+    
+
 @app.route("/music/<username>/")
 def render_music_filter(username):
     filter_list = Song.query.filter_by(username = username).all()
